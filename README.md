@@ -1,1 +1,1 @@
-# PXT991-Inforgraphics
+# PXT991-Infographics
