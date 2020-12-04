@@ -7,26 +7,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import altair as alt
 
-df = pd.read_csv("testdata1.csv")
 
-st.title("Radiative Forcing")
-
-@st.cache
-def waterfallfig(df):
-    fig = go.Figure(go.Waterfall(
-    name = "20", orientation = "v",
-    measure = df['Measure'],
-    x = df['Source'],
-    textposition = "outside",
-    text = df['Contribution'],
-    y = df['Contribution'],
-    connector = {"line":{"color":"rgb(63, 63, 63)"}},
-    ))
-    return (fig)
-
-st.plotly_chart(waterfallfig(df))
-
-#factors = st.checkbox(df['Source'])
 
 dff = pd.read_csv("yearlydata.csv")
 #dff = dff[2:]
@@ -36,16 +17,17 @@ new_df  = pd.DataFrame(dff.values[3:], columns=headers)
 new_df = new_df.astype(float)
 new_df['Year'] = new_df['Year'].astype(int)
 
-new_df
+#new_df
 
 
-
+#selecting the year
 @st.cache
 def yearly_rf(year):
     thatyr = new_df['Year'] == year
     dfyear = new_df[thatyr]
     return dfyear
 
+#year slider
 year = int(st.slider("Choose a year between 1850 and 2012", 1850, 2012))
 st.write("You selected ", year)
 data = yearly_rf(year)
@@ -55,7 +37,7 @@ t = data[data.columns[1:]]
 #t
 
 bard = t.T
-bard 
+#bard 
 
 st.bar_chart(bard.values)
 
