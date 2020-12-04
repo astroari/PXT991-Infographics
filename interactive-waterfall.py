@@ -32,7 +32,7 @@ html.Div([
                          {'label': x, 'value': x, 'disabled':False}
                          for x in df['Source'].unique()
                          ],
-                value=['Carbon Dioxide','Methane','Solar irradiance' ,'Net total'],    # values chosen by default
+                value=['Carbon Dioxide','Methane','Ice/snow Albedo','Solar irradiance' ,'Net total'],    # values chosen by default
 
                 #className='my_box_container',           
                 style={'display':'flex'},            
