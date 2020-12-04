@@ -10,10 +10,13 @@ import plotly
 import plotly.express as px
 import plotly.graph_objects as go
 
+#read data
 df = pd.read_csv("testdata1-m.csv")
 
+#initialise app
 app = dash.Dash(__name__)
 
+#define layout
 app.layout = html.Div([
     html.Div([
             html.Pre(children= "Radiative forcing Infographic by Arina, Kavian and Mateusz",
@@ -56,10 +59,12 @@ html.Div([
 
 ])
 
+#callback based on input
 @app.callback(
     Output(component_id='the_graph', component_property='figure'),
     [Input(component_id='my_checklist', component_property='value')]
 )
+#plot chart using input 
 def update_graph(options_chosen):
 
     dff = df[df['Source'].isin(options_chosen)]
