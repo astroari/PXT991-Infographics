@@ -46,9 +46,10 @@ bard.reset_index(inplace=True)
 bard['newhead'] = bard['newhead'].astype(str)
 bard
 
+'''
 bar = alt.Chart(bard).mark_bar().encode(
     x='newhead',
     y='19'
 )
 st.altair_chart(bar)
-
+'''
