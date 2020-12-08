@@ -7,7 +7,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import altair as alt
 
-df = pd.read_csv("testdata1.csv")
+
 
 st.title("Radiative Forcing")
 
