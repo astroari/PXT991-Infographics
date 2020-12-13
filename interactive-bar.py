@@ -11,7 +11,7 @@ import altair as alt
 
 st.title("Radiative Forcing")
 
-@st.cache
+""" @st.cache
 def waterfallfig(df):
     fig = go.Figure(go.Waterfall(
     name = "20", orientation = "v",
@@ -24,7 +24,7 @@ def waterfallfig(df):
     ))
     return (fig)
 
-st.plotly_chart(waterfallfig(df))
+st.plotly_chart(waterfallfig(df)) """
 
 #factors = st.checkbox(df['Source'])
 
