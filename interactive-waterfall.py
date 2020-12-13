@@ -36,19 +36,16 @@ html.Div([
                          ],
                 value=['Carbon Dioxide','Methane','Ice/snow Albedo','Solar irradiance' ,'Net total'],    # values chosen by default
 
-                #className='my_box_container',           
+                className='my_box_container',           
                 style={'display':'flex'},            
 
-                #inputClassName='my_box_input',         
+                inputClassName='my_box_input',         
                 inputStyle={'cursor':'pointer'},      
 
-                #labelClassName='my_box_label',         
-                labelStyle={'background':'#bc99e0',   
-                             'padding':'0.5rem 0.75rem',
-                             'border-radius':'0.5rem',
-                             'font-family':'Open Sans',
-                             'font-size':'12px'},
-            ),
+                labelClassName='my_box_label',        
+                
+                ),
+            #html.Span("Gases consisting of carbon and halogens", className="tooltiptext"),
         ]),
 
         html.Div([
@@ -75,7 +72,7 @@ def update_graph(options_chosen):
     text = dff['Contribution'],
     y = dff['Contribution'],
     increasing = {"marker":{"color":"#8F2738"}},
-    decreasing = {"marker":{"color":"Teal"}},
+    decreasing = {"marker":{"color":"#5E8DB0"}},
     totals = {"marker":{"color":"#ffb01f", "line":{"color":"gold", "width":3}}},
     connector = {"line":{"color":"#C0C0C0"}},
     ))
