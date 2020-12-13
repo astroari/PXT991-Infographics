@@ -23,7 +23,7 @@ app.layout = html.Div([
         html.H1("Radiative Forcing")
         ]),
     html.Div([
-        html.P("The term 'Radiative Forcing' refers simply to the difference of solar irradiance absorbed by the earth, compared to how much is radiated back to space. This way a system in thermal equilibrium would have zero radiative forcing. Where solar irradiance is the amount of sun’s energy received per unit area per second with units of Watts per meter squared. A positive radiative forcing means more energy is absorbed by the Earth than reflected back into space, which results in the Earth getting warmer and vice versa. Here we break down radiative forcing into its components often refered to as 'forcing agents', categorising it by the effects responsible.")
+        html.P("The term 'Radiative Forcing' refers simply to the difference of solar irradiance absorbed by the earth, compared to how much is radiated back to space. This way a system in thermal equilibrium would have zero radiative forcing. Where solar irradiance is the amount of sun’s energy received per unit area per second with units of Watts per meter squared. A positive radiative forcing means more energy is absorbed by the Earth than reflected back into space, which results in the Earth getting warmer and vice versa. Here we break down radiative forcing into its components often refered to as 'forcing agents', categorising it by the effects responsible.", className="intro")
     ]),
 html.Div([
             dcc.Checklist(
@@ -42,7 +42,7 @@ html.Div([
 
                 #labelClassName='my_box_label',         
                 labelStyle={'background':'#bc99e0',   
-                             'padding':'0.5rem 1rem',
+                             'padding':'0.5rem 0.75rem',
                              'border-radius':'0.5rem',
                              'font-family':'Open Sans',
                              'font-size':'12px'},
